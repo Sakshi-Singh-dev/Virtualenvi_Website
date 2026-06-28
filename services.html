@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Virtualenvi Services – DevOps, Cybersecurity, AI and IT Infrastructure." />
+  <title>Virtualenvi – Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+
+    /* ── Hero ── */
+    .services-hero {
+      background-color: var(--secondary);
+      padding: 80px 60px;
+      text-align: center;
+    }
+    .services-hero h1 { font-size: 42px; }
+    .services-hero p  { font-size: 16px; margin-top: 14px; color: var(--text-dark); }
+
+    /* ─────────────────────────────────────────────
+       SERVICE ROW
+       Layout: full-width section, content on the
+       LEFT (~50% width), buttons pinned to
+       BOTTOM-RIGHT corner of the row.
+    ───────────────────────────────────────────── */
+    .service-row {
+      position: relative;          /* anchor for absolute buttons */
+      padding: 56px 60px 90px;     /* extra bottom padding = room for buttons */
+    }
+
+    /* Content block — left half only */
+    .service-row-content {
+      max-width: 55%;
+    }
+    .service-row-content h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+    .service-row-content p {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      color: var(--text-dark);
+    }
+
+    .service-bullets { list-style: none; }
+    .service-bullets li {
+      font-size: 14px;
+      color: var(--text-dark);
+      padding: 4px 0;
+    }
+    .service-bullets li::before { content: "✅ "; }
+
+    /* Buttons — absolute bottom-right of the row */
+    .service-row-buttons {
+      position: absolute;
+      bottom: 28px;
+      right: 60px;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+    }
+    .service-row-buttons .btn-primary  { padding: 12px 28px; font-size: 14px; }
+    .service-row-buttons .btn-secondary { padding: 12px 28px; font-size: 14px; }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      .services-hero { padding: 60px 24px; }
+      .services-hero h1 { font-size: 28px; }
+
+      .service-row {
+        padding: 36px 24px 28px;   /* reset — no absolute positioning on mobile */
+        position: static;
+      }
+      .service-row-content { max-width: 100%; }
+
+      .service-row-buttons {
+        position: static;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 24px;
+        gap: 12px;
+      }
+      .service-row-buttons .btn-primary  { display: none; }  /* only Learn More on mobile */
+      .service-row-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 16px 0;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="nav-logo">Virtualenvi</a>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Get Started</a>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="services-hero">
+    <h1>Our Services</h1>
+    <p>Comprehensive IT solutions tailored for your business needs</p>
+  </section>
+
+  <!-- SERVICE 1 — DEVOPS -->
+  <section class="service-row section-dark">
+    <div class="service-row-content">
+      <h2>⚙️ DevOps &amp; Cloud Engineering</h2>
+      <p>We help businesses build scalable CI/CD pipelines, migrate to cloud and automate infrastructure for faster software delivery.</p>
+      <ul class="service-bullets">
+        <li>CI/CD Pipeline Implementation</li>
+        <li>Cloud Migration &amp; Optimization</li>
+        <li>Containerization (Docker, Kubernetes)</li>
+        <li>Infrastructure as Code</li>
+      </ul>
+    </div>
+    <div class="service-row-buttons">
+      <a href="contact.html" class="btn-primary">Get Started</a>
+      <a href="contact.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- SERVICE 2 — CYBERSECURITY -->
+  <section class="service-row section-blue">
+    <div class="service-row-content">
+      <h2>🔒 Cybersecurity</h2>
+      <p>We protect your business from evolving cyber threats through security assessments, compliance management and proactive monitoring.</p>
+      <ul class="service-bullets">
+        <li>Security Assessments</li>
+        <li>Compliance &amp; Risk Management</li>
+        <li>Security Awareness Programs</li>
+      </ul>
+    </div>
+    <div class="service-row-buttons">
+      <a href="contact.html" class="btn-primary">Get Started</a>
+      <a href="contact.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- SERVICE 3 — AI -->
+  <section class="service-row section-dark">
+    <div class="service-row-content">
+      <h2>🤖 AI &amp; Automation</h2>
+      <p>We leverage AI to help businesses automate processes, improve decision-making and increase productivity through intelligent solutions.</p>
+      <ul class="service-bullets">
+        <li>AI Consulting</li>
+        <li>Generative AI Solutions</li>
+        <li>Workflow Automation</li>
+        <li>AI-Powered Analytics</li>
+      </ul>
+    </div>
+    <div class="service-row-buttons">
+      <a href="contact.html" class="btn-primary">Get Started</a>
+      <a href="contact.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- SERVICE 4 — IT INFRASTRUCTURE -->
+  <section class="service-row section-blue">
+    <div class="service-row-content">
+      <h2>🖥️ IT Infrastructure &amp; Support</h2>
+      <p>We provide reliable infrastructure management and technical support to ensure high system availability and business continuity.</p>
+      <ul class="service-bullets">
+        <li>Server Management</li>
+        <li>Cloud Infrastructure Management</li>
+        <li>Technical Support Services</li>
+        <li>Performance Monitoring</li>
+      </ul>
+    </div>
+    <div class="service-row-buttons">
+      <a href="contact.html" class="btn-primary">Get Started</a>
+      <a href="contact.html" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Let's build something great together.</p>
+    <p style="font-size:14px; margin-bottom:32px;">No commitment. Free first consultation.</p>
+    <a href="contact.html" class="btn-dark">Get Started</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Virtualenvi</div>
+    <p>Empowering businesses through secure, scalable and future-ready technology solutions.</p>
+    <p class="copyright">© 2026 Virtualenvi. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Virtualenvi – IT Services and Consulting company." />
+  <title>Virtualenvi – About Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .about-hero {
+      background-color: var(--secondary);
+      padding: 80px;
+      text-align: center;
+    }
+    .about-hero p { font-size: 18px; margin-top: 16px; }
+    .who-we-are {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+    }
+    .who-text { flex: 1; }
+    .who-text p { margin-top: 16px; line-height: 1.8; }
+    .who-stats {
+      background-color: var(--secondary);
+      border-radius: 16px;
+      padding: 40px;
+      min-width: 260px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex-shrink: 0;
+    }
+    .who-stats .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .who-stats .stat-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .who-stats .stat-label {
+      font-size: 14px;
+      color: var(--text-dark);
+    }
+    .mission-text {
+      max-width: 800px;
+      margin: 24px auto 0;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .value-box {
+      background-color: var(--secondary);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .why-item { text-align: center; }
+    .why-item h3 { color: var(--accent); margin-bottom: 12px; }
+    @media (max-width: 768px) {
+      .about-hero { padding: 50px 20px; }
+      .about-hero h1 { font-size: 28px; }
+      .who-we-are { flex-direction: column; gap: 30px; }
+      .who-stats { min-width: 100%; width: 100%; }
+      .who-stats .stat-item { flex-direction: row; justify-content: flex-start; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-logo">Virtualenvi</a>
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn-primary">Get Started</a>
+  </div>
+  <!-- Mobile menu drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn-primary">Get Started</a>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <h1>About Virtualenvi</h1>
+    <p>Empowering businesses through innovative technology solutions</p>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="section section-dark">
+    <div class="who-we-are">
+      <div class="who-text">
+        <h2>Who We Are</h2>
+        <p>Virtualenvi is an IT Services and Consulting company focused on helping businesses accelerate their digital transformation journey through modern technology solutions. We specialize in delivering services across DevOps, Information Security, Cloud Technologies, Artificial Intelligence, Automation, and Digital Infrastructure Management.</p>
+        <p style="margin-top:16px;">Our goal is to bridge the gap between business challenges and technology solutions by providing reliable, secure, scalable, and innovative services that enable organizations to operate efficiently and grow sustainably.</p>
+      </div>
+      <div class="who-stats">
+        <div class="stat-item">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Service Domains</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Customer Segments</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Support Available</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="section section-blue" style="text-align:center;">
+    <h2>Our Mission</h2>
+    <p class="mission-text">To empower businesses through innovative technology solutions that are secure, scalable, and future-ready while creating measurable value for customers. We aim to become a trusted technology partner that helps organizations embrace modernization, automation, and digital transformation with confidence.</p>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="section section-dark">
+    <div class="section-title">
+      <h2>Our Core Values</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-box">💡 Innovation</div>
+      <div class="value-box">🤝 Customer Success</div>
+      <div class="value-box">🔒 Security First</div>
+      <div class="value-box">⭐ Excellence</div>
+      <div class="value-box">📚 Continuous Learning</div>
+      <div class="value-box">✅ Integrity</div>
+    </div>
+  </section>
+
+
+  <!-- INDUSTRIES -->
+  <section class="section section-blue">
+    <div class="section-title">
+      <h2>Industries We Serve</h2>
+    </div>
+    <div class="industries-grid">
+      <div class="industry-box">🚀 Startups</div>
+      <div class="industry-box">🏢 SMBs</div>
+      <div class="industry-box">🏥 Healthcare</div>
+      <div class="industry-box">🎓 Education</div>
+      <div class="industry-box">💰 Financial Services</div>
+      <div class="industry-box">🛒 E-commerce</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Let's build something great together.</p>
+    <p style="font-size:14px; margin-bottom:32px;">No commitment. Free first consultation.</p>
+    <a href="contact.html" class="btn-dark">Get Started</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Virtualenvi</div>
+    <p>Empowering businesses through secure, scalable and future-ready technology solutions.</p>
+    <p class="copyright">© 2026 Virtualenvi. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
