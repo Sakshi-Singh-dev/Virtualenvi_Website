@@ -17,7 +17,7 @@ body {
 }
 
 h1 { font-size: 48px; font-weight: 700; color: var(--white); }
-h2 { font-size: 32px; font-weight: 600; color: var(--white); }
+h2 { font-size: 36px; font-weight: 700; color: var(--white); }
 h3 { font-size: 24px; font-weight: 600; color: var(--white); }
 p  { font-size: 16px; color: var(--text-dark); }
 
@@ -150,7 +150,6 @@ nav {
 .cta-section { background-color: var(--accent); padding: 80px; text-align: center; }
 .cta-section h2 { color: var(--primary); margin-bottom: 16px; }
 .cta-section p  { color: var(--primary); font-size: 18px; }
-.cta-section .btn-dark { margin-top: 28px; }
 
 /* ── Footer ── */
 footer {
